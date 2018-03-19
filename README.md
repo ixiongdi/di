@@ -101,10 +101,20 @@ spring-cloud-config|配置文件
 
 功能实现列表:
 
-- [ ] Docker
-- [ ] Nginx
-- [ ] Spring Boot
-- [ ] Spring Cloud
+- [x] Nginx代理
+- [x] Zuul作为微服务网关
+- [x] Eureka作为微服务注册中心
+- [x] Config作为微服务注册中心
+- [x] 通过Feign消费服务
+- [x] 各服务打包成Docker容器部署
+- [ ] 断路器Netflix
+- [ ] Spring Cloud Config集群化部署
+- [ ] Spring Cloud Bus消息总线
+- [ ] Spring Cloud Sleuth服务链路追踪
+- [ ] Eureka集群化
+- [ ] Hystrix Dashboard断路器监控
+- [ ] Hystrix Turbine断路器聚合监控
+- [ ] Spring Security
 
 ## 快速开始
 
