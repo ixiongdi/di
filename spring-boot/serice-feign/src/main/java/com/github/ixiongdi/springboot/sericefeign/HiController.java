@@ -15,4 +15,9 @@ public class HiController {
     public String sayHi(@RequestParam String name){
         return schedualServiceHi.sayHiFromClientOne(name);
     }
+
+    @RequestMapping(value = "/user")
+    public String user() {
+        return  schedualServiceHi.getUser();
+    }
 }

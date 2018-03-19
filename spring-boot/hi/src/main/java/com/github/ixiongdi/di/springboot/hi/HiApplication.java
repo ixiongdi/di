@@ -25,4 +25,9 @@ public class HiApplication {
 	public String home(@RequestParam String name) {
 		return "hi "+name+",i am from port:" +port + "and the foo: " + foo;
 	}
+
+	@RequestMapping("/user")
+	public User user() {
+		return new User("di", 1);
+	}
 }
