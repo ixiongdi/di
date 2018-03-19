@@ -63,6 +63,21 @@ Do it.
 
 ![Spring Cloud](diagram-distributed-systems.svg)
 
+
+### 本项目架构图
+
+![架构图](架构图.svg)
+
+1. 所有的API经过Nginx转发给Zuul。
+2. 静态资源部分经过CDN，也可交由Nginx代理然后到Minio
+3. 网关Zuul和其他微服务一样都注册到Eureka
+4. Spring Cloud Config提供配置服务
+5. 基础服务向注册中心注册暴露服务
+6. 高级服务消费基础服务并通过网关向外部提供服务
+7. Rdis作为缓存提供高速数据服务
+8. MySQL作为数据库服务
+9. Minio提供文件服务
+
 目录、文件|释义
 ---------|----
 nginx|存放和Nginx相关的文件，租如配置文件和密钥
