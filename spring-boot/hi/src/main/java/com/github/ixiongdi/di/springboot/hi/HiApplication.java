@@ -19,8 +19,10 @@ public class HiApplication {
 
 	@Value("${server.port}")
 	String port;
+	@Value("${foo}")
+	String foo;
 	@RequestMapping("/hi")
 	public String home(@RequestParam String name) {
-		return "hi "+name+",i am from port:" +port;
+		return "hi "+name+",i am from port:" +port + "and the foo: " + foo;
 	}
 }

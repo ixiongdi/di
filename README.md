@@ -59,6 +59,10 @@ Do it.
 
 ## 项目文件架构
 
+### Spring Cloud架构图
+
+![Spring Cloud](diagram-distributed-systems.svg)
+
 目录、文件|释义
 ---------|----
 nginx|存放和Nginx相关的文件，租如配置文件和密钥
@@ -77,6 +81,15 @@ spring-boot|微服务
 spring-boot\user|用户服务
 spring-boot\...|很多的业务
 spring-cloud-config|配置文件
+
+## 本项目进度
+
+功能实现列表:
+
+- [ ] Docker
+- [ ] Nginx
+- [ ] Spring Boot
+- [ ] Spring Cloud
 
 ## 快速开始
 
