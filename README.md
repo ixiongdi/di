@@ -53,13 +53,34 @@ Do it.
 
 ## 技术选型
 
+
+
 ### 后端
 
 - Java
 - Spring Boot
 - Spring Cloud
+- Docker
+- k8s
+- protobuf
+- grpc
+- okhttp
+- Spring Framework
+- eventbus
+- json-server
+- ansible
+- todomvc
 
 ### 前端
 
 - JavaScript
 - Vue
+- Bootstrap
+- axios
+- TypeScript
+- webpack
+- ant-desgin
+- elemnet
+- vue-element-admin
+- iview
+- meterial-ui
