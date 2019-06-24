@@ -38,7 +38,7 @@ Do it.
 
 |Java类型|数据库类型|Di类型|
 |-|-|-|
-|Boolean|bit|布尔值
+|Boolean| unsigned tinyint |布尔值
 |Byte|bigint|整型
 |Char|bigint|整型
 |Short|bigint|整型
@@ -84,3 +84,7 @@ Do it.
 - vue-element-admin
 - iview
 - meterial-ui
+
+### 开发计划
+
+1. 
