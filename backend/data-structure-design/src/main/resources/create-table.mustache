@@ -1,0 +1,6 @@
+CREATE TABLE {{tableCode}} (
+  {{#tableFields}}
+  {{code}} {{type}} COMMENT '{{name}}',
+  {{/tableFields}}
+  PRIMARY KEY (ID)
+) COMMENT = '{{tableName}}';;

@@ -1,16 +1,12 @@
 package com.github.ixiongdi.di;
 
 import com.baomidou.mybatisplus.core.exceptions.MybatisPlusException;
-import com.baomidou.mybatisplus.core.toolkit.StringPool;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.InjectionConfig;
 import com.baomidou.mybatisplus.generator.config.*;
-import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 // 演示例子，执行 main 方法控制台输入模块表名回车自动生成对应项目目录中
@@ -45,16 +41,17 @@ public class CodeGenerator {
         gc.setOutputDir(projectPath + "/src/main/java");
         gc.setAuthor("xiongdi (kotlin@qq.com)");
         gc.setOpen(false);
+        gc.setFileOverride(true);
 //         gc.setSwagger2(true); 实体属性 Swagger2 注解
         mpg.setGlobalConfig(gc);
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://localhost:3306/wiki?characterEncoding=UTF-8&useSSL=false&useUnicode=true&serverTimezone=UTC");
+        dsc.setUrl("jdbc:mysql://mysql.ca3zw9ojro1a.rds.cn-northwest-1.amazonaws.com.cn/dev?useSSL=false");
         // dsc.setSchemaName("public");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
-        dsc.setPassword("qw12");
+        dsc.setPassword("qw3erTYU");
         mpg.setDataSource(dsc);
 
         // 包配置

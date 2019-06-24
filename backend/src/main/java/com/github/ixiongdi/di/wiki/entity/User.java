@@ -1,16 +1,14 @@
 package com.github.ixiongdi.di.wiki.entity;
 
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.github.ixiongdi.di.common.BaseEntity;
+import java.time.LocalDateTime;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
-import java.time.LocalDateTime;
-
 /**
  * <p>
- * 用户
+ * 
  * </p>
  *
  * @author xiongdi (kotlin@qq.com)
@@ -21,40 +19,51 @@ import java.time.LocalDateTime;
 @Accessors(chain = true)
 public class User extends BaseEntity {
 
-    private static final long serialVersionUID = 1L;
+private static final long serialVersionUID=1L;
 
-    @TableId
-    private Long id;
+    private String avatarUrl;
 
-    /**
-     * 用户名
-     */
-    private String username;
+    private String city;
 
-    /**
-     * 密码
-     */
+    private String country;
+
+    private LocalDateTime createdDate;
+
+    private String gender;
+
+    private String language;
+
+    private String mail;
+
+    private String mobile;
+
+    private String nickName;
+
+    private String openId;
+
     private String password;
 
-    /**
-     * 角色
-     */
-    private String role;
+    private String province;
 
-    /**
-     * 创建时间
-     */
-    private LocalDateTime createTime;
+    private String unionId;
 
-    /**
-     * 更新时间
-     */
-    private LocalDateTime updateTime;
+    private LocalDateTime updatedDate;
 
-    /**
-     * 状态
-     */
-    private Integer status;
+    private String username;
+
+    private String hospital;
+
+    private String realName;
+
+    private String region0;
+
+    private String region1;
+
+    private String region2;
+
+    private String title;
+
+    private Integer enterpriseId;
 
 
 }

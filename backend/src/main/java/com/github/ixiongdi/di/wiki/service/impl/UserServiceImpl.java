@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * <p>
- * 用户  服务实现类
+ *  服务实现类
  * </p>
  *
  * @author xiongdi (kotlin@qq.com)
