@@ -1,10 +1,8 @@
 package com.github.ixiongdi.di.user.dao;
 
 import com.github.ixiongdi.di.common.BaseDAO;
-import com.github.ixiongdi.di.common.BaseDO;
 import com.github.ixiongdi.di.user.pojo.UserInfoDO;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
 
 /**
  * @author xiongdi (kotlin@qq.com)

@@ -3,13 +3,12 @@ package com.github.ixiongdi.di.common;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
-<<<<<<< Updated upstream
 import lombok.extern.slf4j.Slf4j;
-=======
->>>>>>> Stashed changes
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import java.beans.BeanInfo;
@@ -19,18 +18,19 @@ import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
-<<<<<<< Updated upstream
+
+/**
+ * @author xiongdi (kotlin@qq.com)
+ * @param <B>
+ * @param <S>
+ */
 @RestController
 @Slf4j
-public class BaseController<B, S extends IService<B>> {
-=======
-public class BaseController<E, S extends IService<E>> {
->>>>>>> Stashed changes
+public abstract class BaseController<B, S extends IService<B>> {
 
-    @Resource
+    @Autowired
     public S service;
 
-<<<<<<< Updated upstream
     private Map<String, Object> introspect(Object obj) throws Exception {
         Map<String, Object> result = new HashMap<String, Object>();
         BeanInfo info = Introspector.getBeanInfo(obj.getClass());
@@ -45,6 +45,7 @@ public class BaseController<E, S extends IService<E>> {
 
     /**
      * 查询数据列表
+     *
      * @param bean
      * @param page
      * @return
@@ -84,6 +85,7 @@ public class BaseController<E, S extends IService<E>> {
 
     /**
      * 获取单个数据
+     *
      * @param id
      * @return
      */
@@ -100,6 +102,7 @@ public class BaseController<E, S extends IService<E>> {
 
     /**
      * 创建数据
+     *
      * @param entity
      * @return
      */
@@ -116,6 +119,7 @@ public class BaseController<E, S extends IService<E>> {
 
     /**
      * 替换数据
+     *
      * @param id
      * @param entity
      * @return
@@ -133,6 +137,7 @@ public class BaseController<E, S extends IService<E>> {
 
     /**
      * 更新数据
+     *
      * @param id
      * @param entity
      * @return
@@ -150,6 +155,7 @@ public class BaseController<E, S extends IService<E>> {
 
     /**
      * 删除数据
+     *
      * @param id
      * @return
      */
@@ -162,30 +168,5 @@ public class BaseController<E, S extends IService<E>> {
         response.setMessage("删除成功！");
 
         return response;
-=======
-    @RequestMapping(path = "", method = RequestMethod.GET)
-    public List<E> index() {
-        return service.list();
-    }
-
-    @RequestMapping(path = "{id}", method = RequestMethod.GET)
-    public E read(@PathVariable("id") Long id) {
-        return service.getById(id);
-    }
-
-    @RequestMapping(path = "", method = RequestMethod.POST)
-    public void create(E entity) {
-        service.save(entity);
-    }
-
-    @RequestMapping(path = "{id}", method = RequestMethod.PUT)
-    public void update(@PathVariable("id") Long id, E entity) {
-        service.updateById(entity);
-    }
-
-    @RequestMapping(path = "{id}", method = RequestMethod.DELETE)
-    public void delete(@PathVariable("id") Long id) {
-        service.removeById(id);
->>>>>>> Stashed changes
     }
 }
