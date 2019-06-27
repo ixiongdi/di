@@ -12,6 +12,7 @@ public interface BaseDAO<B> {
 
     /**
      * 获取单个数据
+     *
      * @param id
      * @return
      */
@@ -19,24 +20,21 @@ public interface BaseDAO<B> {
     B get(Long id);
 
     /**
-     *
      * @return
      */
     @Select("SELECT * FROM #{table}")
     Iterable<B> list();
 
     /**
-     *
      * @return
      */
     @Select("COUNT(*) FROM #{table}")
     Long count();
 
     /**
-     *
      * @return
      */
-    @Select("COUNT(*) FROM #{table}")
+    @Select("INSERT FROM #{table} VALUES()")
     Boolean save();
 
     @Select("INSERT FROM #{table} VALUES()")

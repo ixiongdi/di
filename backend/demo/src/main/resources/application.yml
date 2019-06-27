@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    url: jdbc:mysql://mysql.ca3zw9ojro1a.rds.cn-northwest-1.amazonaws.com.cn/dev?useSSL=false
+    username: root
+    password: qw3erTYU
